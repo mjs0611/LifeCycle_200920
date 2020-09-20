@@ -7,17 +7,15 @@ import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_other.*
 
-class MainActivity : AppCompatActivity() {
+class OtherActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_other)
 
-        Log.d("메인화면", "onCreate 실행됨")
+        Log.d("다른화면", "onCreate 실행됨")
 
-        moveToOtherBtn.setOnClickListener {
-            val myIntent = Intent(this, OtherActivity::class.java)
-            startActivity(myIntent)
+        goBackBtn.setOnClickListener {
+            finish()
         }
-
     }
 }
